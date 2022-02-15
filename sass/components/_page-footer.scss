@@ -1,0 +1,145 @@
+// Футер
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $prime-background-color;
+}
+
+.container--footer {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-wrapper {
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+  }
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    justify-content: space-around;
+  }
+}
+
+.address-box {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    text-align: center;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-grow: 1;
+    margin-right: 70px;
+  }
+}
+
+.address {
+  font-style: normal;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address__link--color-white {
+  color: $secondary-text-color;
+}
+
+.address__link--color-white-transparent {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.join-box__title {
+  margin-bottom: 20px;
+  @extend %footer-text-title;
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    text-align: center;
+  }
+}
+
+// Подписка
+
+.subscribe {
+  margin-left: auto;
+}
+
+.subscribe__title {
+  margin-bottom: 20px;
+  @extend %footer-text-title;
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    text-align: center;
+  }
+}
+
+.subscribe__box {
+  display: flex;
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subscribe__input {
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &:focus {
+    background-color: $secondary-text-color;
+  }
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &:focus::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+.subscribe__button {
+  @extend %button;
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+}

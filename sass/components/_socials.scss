@@ -1,0 +1,33 @@
+// Соцсети
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  fill: $social-link-main-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $secondary-text-color;
+  }
+}
+
+.socials__link--color-footer {
+  fill: $secondary-text-color;
+  background-color: rgba(255, 255, 255, 0.1);
+}

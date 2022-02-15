@@ -1,0 +1,29 @@
+// Логотип сайта
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  &__header {
+    @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+      margin-right: 88px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+    }
+  }
+  &__footer {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  &__dark {
+    color: $header-color;
+  }
+  &__light {
+    color: $secondary-text-color;
+  }
+}

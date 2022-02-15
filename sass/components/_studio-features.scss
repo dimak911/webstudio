@@ -1,0 +1,62 @@
+// Список особенностей
+
+.features {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.features__item {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 15px * 4) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 15px;
+    max-width: 270px;
+  }
+}
+
+.features__icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+  background-color: $secondary-background-color;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $header-color;
+
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    text-align: center;
+  }
+}
+
+.features__text {
+  min-width: 270px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

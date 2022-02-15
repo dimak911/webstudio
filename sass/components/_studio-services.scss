@@ -1,0 +1,50 @@
+// Сервисы
+.services__section {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.section--no-padding-top {
+  padding-top: 0;
+}
+
+@media screen and (min-width: $desktop) {
+  .services {
+    display: flex;
+  }
+}
+
+.services__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.services__box {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+
+.services__lable {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 100%;
+}
+
+.services__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $secondary-text-color;
+}

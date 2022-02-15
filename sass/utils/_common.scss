@@ -1,0 +1,55 @@
+//Предотвращает сролл бэкграунда при открытой модалке
+body.modal-open,
+body.menu-open {
+  overflow: hidden;
+}
+
+// Контейнер для контента
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    max-width: $mobile;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    max-width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    max-width: $desktop;
+  }
+}
+
+// Основные отступы для секций
+.section {
+  // padding-top: 94px;
+  // padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+// Заголовки секций
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $header-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
